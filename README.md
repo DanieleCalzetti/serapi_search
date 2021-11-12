@@ -2,6 +2,12 @@
 
 This tool will use SERAPI API to search a query inside google, yandex, bing, duckduckgo, baidu.
 
+## Contribuitors 
+
+[Daniele Calzetti](https://www.linkedin.com/in/daniele-calzetti/)
+
+[P0lif3m0](https://twitter.com/P0lif3m0)
+
 ## TODO
 
 1. Accept the arguments from cli via argparse. Arguments:
