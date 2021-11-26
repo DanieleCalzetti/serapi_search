@@ -2,7 +2,7 @@
 
 This tool will use SERAPI API to search a query inside google, yandex, bing, duckduckgo, baidu.
 
-## Contribuitors 
+## Contribuitors
 
 [Daniele Calzetti](https://www.linkedin.com/in/daniele-calzetti/)
 
@@ -10,18 +10,13 @@ This tool will use SERAPI API to search a query inside google, yandex, bing, duc
 
 ## TODO
 
-1. Accept the arguments from cli via argparse. Arguments:
-    - global-search check
-    - a search parameter for each search engines check
-    - a parameter to select the country where to conduct a research (Low Priority)
-    - a flag to generate html from the json (Low Priority)
-2. create a folder where to save the research check
-3. conduct research:
-    - if only global-search is defined search on all engines check
-    - if a flag for a specific engine is setted search only in the indicated engine check
-    - if global-search is passed along with others flags for search engines use global-search to search on undefined engines, for the other use the appropriate tag check
-4. Save to a json the results check
-5. Create an html file with custom results
+- Create an html file with custom results
+
+## Disclaimer
+
+Currently SERPapi saves a copy of the results in their server and retain them for 30 days. 
+There isn't a way to delete the results but hopefully they will be implemented in the next future.
+Neverthless this little experiment will keep going. ;)
 
 ## Execution of the tool
 
