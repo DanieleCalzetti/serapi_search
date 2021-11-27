@@ -11,6 +11,9 @@ This tool will use SERAPI API to search a query inside google, yandex, bing, duc
 ## TODO
 
 - Create an html file with custom results
+- create a gitignore for a config file with the api key 
+- Evaluate if the key used for the exportation to csv are the same for all the engines (I.E. the key text to indicate the query is used only in duckduckgo)
+- Implement in the csv exportation a way to add the related_results for the organic results
 
 ## Disclaimer
 
@@ -71,4 +74,3 @@ If the above variable are lefted empty but it is provided a GLOBAL_API_KEY, the 
     python main.py -ba <query to search> --> search only in baidu
 
     python main.py -ba <query to search> -g <query to search> -gl <query to search> --> search in bing and google the given query and on the other search engines the query passed via gl
-
