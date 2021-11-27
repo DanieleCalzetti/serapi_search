@@ -2,6 +2,7 @@ from sys import path
 import search_setup
 import search_engines
 import args
+import report
 
 # Config section
 
@@ -40,12 +41,18 @@ query_to_search = search_setup.arguments_to_search(
 search_setup.create_directory()
 
 if query_to_search[0] != None:
-  search_engines.google_engine(query_to_search[0], google_API_KEY)
+  google_results  = search_engines.google_engine(query_to_search[0], google_API_KEY)
+  report.report_generator(google_results, arguments.json)
 if query_to_search[1] != None:
-  search_engines.yandex_engine(query_to_search[1], yandex_API_KEY)
+  yandex_results = search_engines.yandex_engine(query_to_search[1], yandex_API_KEY)
+  report.report_generator(yandex_results, arguments.json)
 if query_to_search[2] != None:
-  search_engines.bing_engine(query_to_search[2], bing_API_KEY)
+  bing_results = search_engines.bing_engine(query_to_search[2], bing_API_KEY)
+  report.report_generator(bing_results, arguments.json)
 if query_to_search[3] != None:
-  search_engines.duckduckgo_engine(query_to_search[3], duckduckgo_API_KEY)
+  duck_results = search_engines.duckduckgo_engine(query_to_search[3], duckduckgo_API_KEY)
+  report.report_generator(duck_results, arguments.json)
 if query_to_search[4] != None:
-  search_engines.baidu_engine(query_to_search[4], baidu_API_KEY)
+  baidu_results = search_engines.baidu_engine(query_to_search[4], baidu_API_KEY)
+  report.report_generator(baidu_results, arguments.json)
+

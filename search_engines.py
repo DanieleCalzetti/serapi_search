@@ -15,11 +15,7 @@ def google_engine(google_query, google_API_KEY):
   }
 
   google_search = GoogleSearch(params)
-  json_google = google_search.get_json()
-  
-  with open("google.json", "w") as file:
-    json.dump(json_google, file)			
-
+  return google_search
 
 def yandex_engine(yandex_query, yandex_API_KEY):
   params = {
@@ -31,11 +27,7 @@ def yandex_engine(yandex_query, yandex_API_KEY):
     }
     
   yandex_search = GoogleSearch(params)
-  json_resultsY = yandex_search.get_json()
-  
-  with open("yandex.json", "w") as file:
-    json.dump(json_resultsY, file)			
-
+  return yandex_search
 
 def bing_engine(bing_query, bing_API_KEY):
   params = {
@@ -47,11 +39,7 @@ def bing_engine(bing_query, bing_API_KEY):
   }
 
   bing_search = GoogleSearch(params)
-  json_bing = bing_search.get_json()
-
-  with open("bing.json", "w") as file:
-      json.dump(json_bing, file)			
-
+  return bing_search
 
 def duckduckgo_engine(duckduckgo_query, duckduckgo_API_KEY):
   params = {
@@ -62,11 +50,7 @@ def duckduckgo_engine(duckduckgo_query, duckduckgo_API_KEY):
   }
 
   duck_search = GoogleSearch(params)
-  json_ddgo = duck_search.get_json()
-
-  with open("duckduckgo.json", "w") as file:
-      json.dump(json_ddgo, file)			
-    
+  return duck_search    
 
 def baidu_engine(baidu_query, baidu_API_KEY):
   params = {
@@ -79,7 +63,4 @@ def baidu_engine(baidu_query, baidu_API_KEY):
   }
 
   baidu_search = GoogleSearch(params)
-  json_baidu = baidu_search.get_json()
-
-  with open("baidu.json", "w") as file:
-      json.dump(json_baidu, file)			#crea un file: .json
+  return baidu_search
