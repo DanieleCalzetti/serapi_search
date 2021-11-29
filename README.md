@@ -73,5 +73,6 @@ If the above variable are lefted empty but it is provided a GLOBAL_API_KEY, the 
     python main.py -bg <query to search> --> search only in bing
     python main.py -d <query to search> --> search only in duckduckgo
     python main.py -ba <query to search> --> search only in baidu
+    python main.py -js --> will generate the json file for the search engine/s used
 
     python main.py -ba <query to search> -g <query to search> -gl <query to search> --> search in bing and google the given query and on the other search engines the query passed via gl
