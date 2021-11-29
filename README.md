@@ -2,7 +2,7 @@
 
 This tool will use SERAPI API to search a query inside google, yandex, bing, duckduckgo, baidu.
 
-## Contribuitors 
+## Contribuitors
 
 [Daniele Calzetti](https://www.linkedin.com/in/daniele-calzetti/)
 
@@ -10,18 +10,17 @@ This tool will use SERAPI API to search a query inside google, yandex, bing, duc
 
 ## TODO
 
-1. Accept the arguments from cli via argparse. Arguments:
-    - global-search check
-    - a search parameter for each search engines check
-    - a parameter to select the country where to conduct a research (Low Priority)
-    - a flag to generate html from the json (Low Priority)
-2. create a folder where to save the research check
-3. conduct research:
-    - if only global-search is defined search on all engines check
-    - if a flag for a specific engine is setted search only in the indicated engine check
-    - if global-search is passed along with others flags for search engines use global-search to search on undefined engines, for the other use the appropriate tag check
-4. Save to a json the results check
-5. Create an html file with custom results
+- Create an html file with custom results
+- create a gitignore for a config file with the api key 
+- Evaluate if the key used for the exportation to csv are the same for all the engines (I.E. the key text to indicate the query is used only in duckduckgo)
+- Implement in the csv exportation a way to add the related_results for the organic results
+- Add contributor to main.py
+
+## Disclaimer
+
+Currently SERPapi saves a copy of the results in their server and retain them for 30 days. 
+There isn't a way to delete the results but hopefully they will be implemented in the next future.
+Neverthless this little experiment will keep going. ;)
 
 ## Execution of the tool
 
@@ -74,6 +73,6 @@ If the above variable are lefted empty but it is provided a GLOBAL_API_KEY, the 
     python main.py -bg <query to search> --> search only in bing
     python main.py -d <query to search> --> search only in duckduckgo
     python main.py -ba <query to search> --> search only in baidu
+    python main.py -js --> will generate the json file for the search engine/s used
 
     python main.py -ba <query to search> -g <query to search> -gl <query to search> --> search in bing and google the given query and on the other search engines the query passed via gl
-
