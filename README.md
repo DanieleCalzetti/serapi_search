@@ -14,6 +14,7 @@ This tool will use SERAPI API to search a query inside google, yandex, bing, duc
 - create a gitignore for a config file with the api key 
 - Evaluate if the key used for the exportation to csv are the same for all the engines (I.E. the key text to indicate the query is used only in duckduckgo)
 - Implement in the csv exportation a way to add the related_results for the organic results
+- Add contributor to main.py
 
 ## Disclaimer
 
