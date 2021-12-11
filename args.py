@@ -1,4 +1,5 @@
 import argparse
+import sys
 
 def interactive_cli():
   parser_serapi = argparse.ArgumentParser(description='Tool to query multiple search engine')
@@ -23,5 +24,8 @@ def interactive_cli():
   parser_serapi.add_argument('-js', '--json',
                       action='store_true',
                       help='Use this flag to generate a file json')
+  if len(sys.argv)==1:
+    parser_serapi.print_help()
+    parser_serapi.exit()
   args = parser_serapi.parse_args()
   return args

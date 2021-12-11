@@ -16,14 +16,17 @@ def report_generator(search_results, json_flag):
                 descriptor_list.append(search_engine_json["search_parameters"]["q"])
                 descriptor_list.append(fields["link"])
                 descriptor_list.append(fields["title"])
-                descriptor_list.append(fields["snippet"])
+                if "snippet" in fields: 
+                    descriptor_list.append(fields["snippet"])
                 writer.writerow(descriptor_list)
             elif "text" in search_engine_json["search_parameters"]:
                 descriptor_list.append(search_engine_json["search_parameters"]["text"])
                 descriptor_list.append(fields["link"])
                 descriptor_list.append(fields["title"])
-                descriptor_list.append(fields["snippet"])
+                if "snippet" in fields:
+                    descriptor_list.append(fields["snippet"])
                 writer.writerow(descriptor_list)
-    
-    with open("".join([search_engine_json["search_parameters"]["engine"], ".json"]), "w", encoding="utf-8") as file:
-        json.dump(search_engine_json, file)
+
+    if json_flag == True:
+        with open("".join([search_engine_json["search_parameters"]["engine"], ".json"]), "w", encoding="utf-8") as file:
+            json.dump(search_engine_json, file)
