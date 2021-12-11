@@ -1,8 +1,19 @@
+"""
+Tool to query google, yandex, bing, baidu and duckduckgo via API mantained by SERAPI.
+https://serpapi.com/
+"""
+
 import sys
 import search_setup
 import search_engines
 import args
 import report
+
+__author__ = "Daniele Calzetti and P0lif3m0"
+__copyright__ = "Copyright 2007, The Cogent Project"
+__credits__ = ["Daniele Calzetti", "P0lif3m0"]
+__license__ = "GNU GPLv3"
+__maintainer__ = "Daniele Calzetti"
 
 # Config section
 
